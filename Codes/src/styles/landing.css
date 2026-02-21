@@ -109,30 +109,14 @@
 
 .landing-illustration {
   margin-top: var(--space-8);
-  display: grid;
-  grid-template-columns: 1fr 1.3fr 1fr;
-  align-items: end;
-  gap: var(--space-4);
 }
 
-.landing-illustration__left,
-.landing-illustration__center,
-.landing-illustration__right {
+.landing-illustration__image {
+  width: 100%;
+  display: block;
   border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, #f9f9f9, #e9edf4);
   border: 1px solid #e2e2e2;
-}
-
-.landing-illustration__left {
-  height: 180px;
-}
-
-.landing-illustration__center {
-  height: 240px;
-}
-
-.landing-illustration__right {
-  height: 190px;
+  box-shadow: var(--shadow-sm);
 }
 
 .landing-problem {
@@ -256,10 +240,6 @@
 @media (max-width: 900px) {
   .section-header h1 {
     font-size: 1.6rem;
-  }
-
-  .landing-illustration {
-    grid-template-columns: 1fr;
   }
 
   .footer__grid {

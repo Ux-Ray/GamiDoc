@@ -1,9 +1,11 @@
 export function LandingIllustrationBlock() {
   return (
     <section className="landing-illustration" aria-label="Illustration">
-      <div className="landing-illustration__left" />
-      <div className="landing-illustration__center" />
-      <div className="landing-illustration__right" />
+      <img
+        className="landing-illustration__image"
+        src="/images/landing-banner.png"
+        alt="Researchers working with gamification design and evaluation artifacts"
+      />
     </section>
   );
 }

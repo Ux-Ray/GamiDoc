@@ -39,14 +39,20 @@ This strategy is mandatory input for any agent working on page planning or imple
 - Identify which UI parts of the page map to already available reusable components (from previously developed pages).
 - Identify which required components do not exist yet and must be created.
 - Classify missing components as either shared (`components/ui`) or feature-specific (`modules/*/components`).
-3. Complete event list and actions per event.
+3. Visual asset mapping (mandatory).
+- For each required visual element from prototype (banner, illustration, icon set, image blocks), specify:
+  - source asset path,
+  - rendering method (`img`, inline SVG, CSS background),
+  - target component where it is used.
+- Placeholder graphics are not allowed unless explicitly approved by user in the page requirements review.
+4. Complete event list and actions per event.
 - Include: page open, click, input, submit, keyboard, navigation, modal open/close, error/retry.
 - For each event: trigger, precondition, action, expected result, error behavior.
-4. API requirements for that page.
+5. API requirements for that page.
 - Minimum: endpoint, method, input, output, error output.
 - Note: FE makes real API calls; backend returns mocked data (lite backend).
 - Input/output details are finalized during each page analysis.
-5. Test list for page validation.
+6. Test list for page validation.
 - Unit tests, integration tests, e2e scenarios, accessibility checks.
 
 ## Architecture Compliance Rules During Page Work
@@ -55,6 +61,7 @@ This strategy is mandatory input for any agent working on page planning or imple
 3. No raw UI in pages: use shared UI + feature components.
 4. Keep auth-related controls from prototypes (can be non-functional placeholders).
 5. FE must call configured API endpoints (no page-level hardcoded local JSON data source).
+6. Prototype-required visual assets must be implemented (or explicitly waived by user); silent placeholder replacement is forbidden.
 
 ## API/Public Interface Policy
 Per page, define a "mini-contract":
@@ -74,13 +81,66 @@ Before commit/push:
 3. Commit only after passing tests.
 4. Push feature branch to remote.
 
+### Minimum Mandatory Tests Per Page
+Every page implementation must include and pass, at minimum:
+
+1. **Component/unit tests (page scope)**
+- Validate rendering of key sections and reusable components used by the page.
+- Validate critical interactions (main CTA/buttons/inputs) and expected state updates.
+
+2. **API integration tests (frontend level)**
+- Validate successful rendering path when required page APIs return success.
+- Validate failure path (API error/timeout) with visible fallback behavior.
+- Validate retry/recovery flow when applicable.
+
+3. **Routing/navigation tests**
+- Validate all primary page navigation actions route to expected destinations.
+- Validate broken/unavailable route fallback behavior where defined.
+
+4. **App bootstrap smoke test (mandatory)**
+- Validate app startup path is functional (entrypoint mounts correctly to HTML root container).
+- Must fail if mount container mismatch exists (prevents blank-page regressions).
+
+5. **Browser smoke test (mandatory)**
+- Open page in browser automation and verify:
+  - page is not blank,
+  - at least one key heading/landmark is visible,
+  - no uncaught runtime error blocks render.
+  - required prototype visual assets are visible in the page (banner/illustration/image sections).
+
+7. **Visual asset presence tests (mandatory)**
+- Validate required visual assets defined in the page requirements document are rendered.
+- Validate asset source/path binding is correct.
+- Validate fallback behavior for missing asset (if fallback is explicitly defined and approved).
+
+6. **Accessibility smoke tests**
+- Keyboard navigation works for main interactive elements.
+- Focus is visible (`:focus-visible`) and semantic landmarks exist.
+
+### Minimum Release Commands
+For each implemented page, the agent must run and report:
+1. `npm test`
+2. `npm run build`
+3. page/browser smoke test command (e.g., `npm run test:e2e:smoke` once available in project)
+
+If any mandatory test is missing from the project tooling, the agent must:
+1. explicitly report the gap,
+2. add the missing test/tooling before considering the page complete.
+
+### Prototype Fidelity Gate (before commit/push)
+1. Confirm every prototype-required visual element is implemented and visible.
+2. If a required asset is missing in repository inputs:
+- agent must either request the asset or explicit waiver from user,
+- or extract it from provided prototype only if user allows it.
+3. Do not mark page complete while required visual assets are unresolved.
+
 ## Acceptance Criteria for Strategy Usage
 1. Every page has a requirements doc in `Requirements/Page-Requirements/`.
-2. Every page doc includes image, graphical/component analysis, events/actions, API mini-contracts, and tests.
+2. Every page doc includes image, graphical/component analysis, visual asset mapping, events/actions, API mini-contracts, and tests.
 3. No implementation starts before explicit user approval.
 4. No work is done on `main`.
 5. FE uses real API calls to configured endpoints.
-6. Tests are run and pass before commit/push.
+6. Minimum mandatory test set (unit + API integration + routing + bootstrap smoke + browser smoke + visual asset presence + accessibility smoke) is run and passes before commit/push.
 
 ## Assumptions and Defaults
 1. Frontend stack and architecture are governed by docs in `Requirements/Architecture/`.

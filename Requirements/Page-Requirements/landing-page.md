@@ -1,4 +1,4 @@
-# Landing Page Requirements
+﻿# Landing Page Requirements
 
 ## Page Metadata
 - Page name: `Landing Page`
@@ -86,6 +86,13 @@ Feature-specific components to create under `modules/public/components`:
 - All spacing, typography, colors, radius, shadows must come from tokens/base/components rules.
 - Page composes shared + feature components only.
 
+### 2.4 Visual Asset Mapping
+1. Mid-page illustration/banner block
+- Source asset path: `Codes/public/images/landing-banner.png`
+- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
+- Rendering method: `<img>`
+- Target component: `Codes/src/modules/public/components/LandingIllustrationBlock.jsx`
+- Visibility requirement: banner image must be visible without any user action.
 ## 3) Event List and Action Matrix
 
 | Event ID | Trigger | Preconditions | Action | Expected Result | Error/Fallback |
@@ -158,7 +165,7 @@ Feature-specific components to create under `modules/public/components`:
     "columns": [
       { "title": "About Gamidoc", "links": [{ "label": "About", "target": "/about" }] }
     ],
-    "copyright": "� GamiDoc"
+    "copyright": "© GamiDoc"
   }
 }
 ```
@@ -226,3 +233,5 @@ Feature-specific components to create under `modules/public/components`:
 ## Status
 - This is a requirements/specification document only.
 - Implementation must start only after explicit user approval.
+
+

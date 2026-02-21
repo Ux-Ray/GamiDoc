@@ -76,6 +76,11 @@ describe("LandingPage", () => {
 
     await screen.findByText("Welcome To GamiDoc!");
     expect(screen.getByText("Design or evaluate a gamified system")).toBeInTheDocument();
+    expect(
+      screen.getByRole("img", {
+        name: "Researchers working with gamification design and evaluation artifacts",
+      }),
+    ).toBeInTheDocument();
   });
 
   it("shows retry state on API failure and reloads on retry", async () => {
