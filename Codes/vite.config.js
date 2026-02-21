@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+﻿import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 const landingContent = {
@@ -48,9 +48,7 @@ const landingContent = {
       {
         title: "About Gamidoc",
         text: "GamiDoc is a research-driven tool supporting the design, evaluation, and documentation of gamified systems through structured methodologies.",
-        links: [
-          { label: "Project of the Human-computer interaction group at Fondazione Bruno Kessler", target: "/about" },
-        ],
+        note: "Project of the Human-computer interaction group at Fondazione Bruno Kessler",
       },
       {
         title: "Resources",
@@ -77,8 +75,7 @@ const landingContent = {
         ],
       },
     ],
-    copyright:
-      "© GamiDoc — Research tool for gamification design & evaluation | University/Lab name | 2024",
+    copyright: "© GamiDoc - Research tool for gamification design & evaluation | University/Lab name | 2024",
   },
 };
 
@@ -125,3 +122,4 @@ export default defineConfig({
     setupFiles: "./src/tests/setup.js",
   },
 });
+

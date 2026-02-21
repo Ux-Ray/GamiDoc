@@ -9,6 +9,7 @@ export function FooterColumns({ columns, copyright }) {
             <section key={column.title}>
               <h3>{column.title}</h3>
               {column.text ? <p>{column.text}</p> : null}
+              {column.note ? <p className="footer__note">{column.note}</p> : null}
               {column.links?.length ? (
                 <ul>
                   {column.links.map((link) => (

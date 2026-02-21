@@ -1,9 +1,6 @@
 .top-nav {
   background: var(--color-brand-dark);
   color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: var(--z-nav);
 }
 
 .top-nav__content {
@@ -24,33 +21,38 @@
 }
 
 .ui-button {
-  border: 1px solid transparent;
+  border: 1px solid #c8d2de;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  padding: var(--space-2) var(--space-4);
+  padding: 0.55rem 1.35rem;
   font-weight: 600;
+  color: #1f2a37;
 }
 
 .ui-button--primary {
   background: var(--color-brand-gold);
+  border-color: #dcc058;
 }
 
 .ui-button--secondary {
   background: var(--color-brand-secondary);
-  border-color: #c4d1df;
+  border-color: #c4d0dd;
 }
 
 .ui-button--nav-small {
   background: transparent;
   color: #fff;
-  border-color: #3f3f3f;
-  padding: var(--space-1) var(--space-3);
+  border-color: #454545;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
 }
 
 .ui-button--nav-small-primary {
   background: var(--color-brand-gold);
   color: #111;
-  padding: var(--space-1) var(--space-3);
+  border-color: #dcc058;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
 }
 
 .landing-page {
@@ -68,9 +70,17 @@
 }
 
 .section-header p {
-  font-size: var(--font-size-2);
+  font-size: 0.98rem;
   color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.section-header__subtitle-group {
   margin-bottom: var(--space-6);
+}
+
+.section-header__subtitle-group p {
+  margin-bottom: 0;
 }
 
 .landing-features {
@@ -102,7 +112,8 @@
 }
 
 .ui-card__title {
-  font-size: var(--font-size-2);
+  font-size: 1.05rem;
+  line-height: 1.2;
 }
 
 .ui-card__description {
@@ -160,13 +171,17 @@
 
 .footer h3 {
   margin-bottom: var(--space-2);
-  font-size: var(--font-size-2);
+  font-size: 1rem;
 }
 
 .footer p,
 .footer li {
   color: #d5d5d5;
-  font-size: var(--font-size-1);
+  font-size: 0.82rem;
+}
+
+.footer__note {
+  margin-top: var(--space-3);
 }
 
 .footer ul {
