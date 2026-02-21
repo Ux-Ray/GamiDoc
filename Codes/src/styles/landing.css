@@ -95,7 +95,10 @@
 }
 
 .ui-card__icon {
-  font-size: 1.1rem;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .ui-card__title {

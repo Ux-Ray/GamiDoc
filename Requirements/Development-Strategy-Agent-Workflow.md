@@ -35,24 +35,28 @@ This strategy is mandatory input for any agent working on page planning or imple
 
 ## Minimum Required Content for Each Page Requirements Document
 1. Prototype image (embedded + source path).
-2. Graphical/component analysis.
+2. UI Structure Breakdown must explicitly identify icons used in the page.
+- List each icon by usage context (e.g., card icon, nav icon, status icon).
+- For each icon include source asset path.
+- Icon previews must be embedded and visible in the requirements document (similar to prototype embedding).
+3. Graphical/component analysis.
 - Identify which UI parts of the page map to already available reusable components (from previously developed pages).
 - Identify which required components do not exist yet and must be created.
 - Classify missing components as either shared (`components/ui`) or feature-specific (`modules/*/components`).
-3. Visual asset mapping (mandatory).
+4. Visual asset mapping (mandatory).
 - For each required visual element from prototype (banner, illustration, icon set, image blocks), specify:
   - source asset path,
   - rendering method (`img`, inline SVG, CSS background),
   - target component where it is used.
 - Placeholder graphics are not allowed unless explicitly approved by user in the page requirements review.
-4. Complete event list and actions per event.
+5. Complete event list and actions per event.
 - Include: page open, click, input, submit, keyboard, navigation, modal open/close, error/retry.
 - For each event: trigger, precondition, action, expected result, error behavior.
-5. API requirements for that page.
+6. API requirements for that page.
 - Minimum: endpoint, method, input, output, error output.
 - Note: FE makes real API calls; backend returns mocked data (lite backend).
 - Input/output details are finalized during each page analysis.
-6. Test list for page validation.
+7. Test list for page validation.
 - Unit tests, integration tests, e2e scenarios, accessibility checks.
 
 ## Architecture Compliance Rules During Page Work
@@ -136,7 +140,7 @@ If any mandatory test is missing from the project tooling, the agent must:
 
 ## Acceptance Criteria for Strategy Usage
 1. Every page has a requirements doc in `Requirements/Page-Requirements/`.
-2. Every page doc includes image, graphical/component analysis, visual asset mapping, events/actions, API mini-contracts, and tests.
+2. Every page doc includes prototype image, icon list with visible previews, graphical/component analysis, visual asset mapping, events/actions, API mini-contracts, and tests.
 3. No implementation starts before explicit user approval.
 4. No work is done on `main`.
 5. FE uses real API calls to configured endpoints.

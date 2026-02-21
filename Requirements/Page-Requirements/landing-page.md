@@ -33,6 +33,14 @@ Provide the public entry point to GamiDoc, explain value proposition, and route 
 - Card 2: Browse frameworks/methods + `Browse resources`
 - Card 3: View reviewed design + `View shared designs`
 
+Icons used in feature cards:
+- Card 1 icon file: `Codes/public/icons/design-evaluate.svg`
+  ![Design or evaluate icon](../../Codes/public/icons/design-evaluate.svg)
+- Card 2 icon file: `Codes/public/icons/browse-resources.svg`
+  ![Browse resources icon](../../Codes/public/icons/browse-resources.svg)
+- Card 3 icon file: `Codes/public/icons/shared-designs.svg`
+  ![Shared designs icon](../../Codes/public/icons/shared-designs.svg)
+
 4. Mid-page illustration/banner block
 
 5. Problem statement section
@@ -93,6 +101,24 @@ Feature-specific components to create under `modules/public/components`:
 - Rendering method: `<img>`
 - Target component: `Codes/src/modules/public/components/LandingIllustrationBlock.jsx`
 - Visibility requirement: banner image must be visible without any user action.
+
+2. Feature card icon set
+- Source asset path: `Codes/public/icons/design-evaluate.svg`
+- Rendering method: `<img>`
+- Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
+- Visibility requirement: icon visible in first card header.
+
+3. Feature card icon set
+- Source asset path: `Codes/public/icons/browse-resources.svg`
+- Rendering method: `<img>`
+- Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
+- Visibility requirement: icon visible in second card header.
+
+4. Feature card icon set
+- Source asset path: `Codes/public/icons/shared-designs.svg`
+- Rendering method: `<img>`
+- Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
+- Visibility requirement: icon visible in third card header.
 ## 3) Event List and Action Matrix
 
 | Event ID | Trigger | Preconditions | Action | Expected Result | Error/Fallback |
