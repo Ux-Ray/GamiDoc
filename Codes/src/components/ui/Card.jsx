@@ -1,5 +1,5 @@
 ﻿export function Card({ title, description, action, icon }) {
-  const iconSrc = icon?.src ?? "/icons/design-evaluate.svg";
+  const iconSrc = icon?.src ?? "/icons/design-evaluate.png";
   const iconAlt = icon?.alt ?? "Feature card icon";
 
   return (

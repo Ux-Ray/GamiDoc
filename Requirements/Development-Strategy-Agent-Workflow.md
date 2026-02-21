@@ -39,6 +39,7 @@ This strategy is mandatory input for any agent working on page planning or imple
 - List each icon by usage context (e.g., card icon, nav icon, status icon).
 - For each icon include source asset path.
 - Icon previews must be embedded and visible in the requirements document (similar to prototype embedding).
+- Default icon asset format is `.png` (unless user explicitly requests another format).
 3. Graphical/component analysis.
 - Identify which UI parts of the page map to already available reusable components (from previously developed pages).
 - Identify which required components do not exist yet and must be created.
@@ -48,6 +49,7 @@ This strategy is mandatory input for any agent working on page planning or imple
   - source asset path,
   - rendering method (`img`, inline SVG, CSS background),
   - target component where it is used.
+- When icon/image assets are not separately provided, they must be extracted from the prototype image and saved as project assets (default `.png`).
 - Placeholder graphics are not allowed unless explicitly approved by user in the page requirements review.
 5. Complete event list and actions per event.
 - Include: page open, click, input, submit, keyboard, navigation, modal open/close, error/retry.

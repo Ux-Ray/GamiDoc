@@ -34,12 +34,12 @@ Provide the public entry point to GamiDoc, explain value proposition, and route 
 - Card 3: View reviewed design + `View shared designs`
 
 Icons used in feature cards:
-- Card 1 icon file: `Codes/public/icons/design-evaluate.svg`
-  ![Design or evaluate icon](../../Codes/public/icons/design-evaluate.svg)
-- Card 2 icon file: `Codes/public/icons/browse-resources.svg`
-  ![Browse resources icon](../../Codes/public/icons/browse-resources.svg)
-- Card 3 icon file: `Codes/public/icons/shared-designs.svg`
-  ![Shared designs icon](../../Codes/public/icons/shared-designs.svg)
+- Card 1 icon file: `Codes/public/icons/design-evaluate.png`
+  ![Design or evaluate icon](../../Codes/public/icons/design-evaluate.png)
+- Card 2 icon file: `Codes/public/icons/browse-resources.png`
+  ![Browse resources icon](../../Codes/public/icons/browse-resources.png)
+- Card 3 icon file: `Codes/public/icons/shared-designs.png`
+  ![Shared designs icon](../../Codes/public/icons/shared-designs.png)
 
 4. Mid-page illustration/banner block
 
@@ -103,19 +103,22 @@ Feature-specific components to create under `modules/public/components`:
 - Visibility requirement: banner image must be visible without any user action.
 
 2. Feature card icon set
-- Source asset path: `Codes/public/icons/design-evaluate.svg`
+- Source asset path: `Codes/public/icons/design-evaluate.png`
+- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
 - Rendering method: `<img>`
 - Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
 - Visibility requirement: icon visible in first card header.
 
 3. Feature card icon set
-- Source asset path: `Codes/public/icons/browse-resources.svg`
+- Source asset path: `Codes/public/icons/browse-resources.png`
+- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
 - Rendering method: `<img>`
 - Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
 - Visibility requirement: icon visible in second card header.
 
 4. Feature card icon set
-- Source asset path: `Codes/public/icons/shared-designs.svg`
+- Source asset path: `Codes/public/icons/shared-designs.png`
+- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
 - Rendering method: `<img>`
 - Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
 - Visibility requirement: icon visible in third card header.

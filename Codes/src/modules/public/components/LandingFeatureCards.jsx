@@ -5,15 +5,15 @@ import { Grid } from "../../../components/ui/Grid";
 
 const icons = {
   "design-evaluate": {
-    src: "/icons/design-evaluate.svg",
+    src: "/icons/design-evaluate.png",
     alt: "Document icon for design or evaluate workflow",
   },
   resources: {
-    src: "/icons/browse-resources.svg",
+    src: "/icons/browse-resources.png",
     alt: "Search icon for frameworks and methods resources",
   },
   "shared-designs": {
-    src: "/icons/shared-designs.svg",
+    src: "/icons/shared-designs.png",
     alt: "Folder icon for reviewed shared designs",
   },
 };

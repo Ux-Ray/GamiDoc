@@ -81,11 +81,11 @@ describe("LandingPage", () => {
         name: "Researchers working with gamification design and evaluation artifacts",
       }),
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole("img", {
-        name: "Document icon for design or evaluate workflow",
-      }),
-    ).toBeInTheDocument();
+    const firstCardIcon = screen.getByRole("img", {
+      name: "Document icon for design or evaluate workflow",
+    });
+    expect(firstCardIcon).toBeInTheDocument();
+    expect(firstCardIcon).toHaveAttribute("src", "/icons/design-evaluate.png");
   });
 
   it("shows retry state on API failure and reloads on retry", async () => {
