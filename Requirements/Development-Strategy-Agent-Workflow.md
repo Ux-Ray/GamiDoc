@@ -140,6 +140,18 @@ If any mandatory test is missing from the project tooling, the agent must:
 - or extract it from provided prototype only if user allows it.
 3. Do not mark page complete while required visual assets are unresolved.
 
+### Visual Comparison Review (before commit/push)
+1. Perform a side-by-side visual comparison between implemented page and prototype image.
+2. Verify at minimum:
+- layout structure and section order,
+- spacing and alignment,
+- typography hierarchy and line breaks,
+- color fidelity (background, text, buttons, borders),
+- icon/image fidelity and placement,
+- header/footer structure and content rendering.
+3. Record visual differences in the page requirements doc review notes.
+4. Resolve differences before finalizing, unless user explicitly approves them as intentional deviations.
+
 ## Acceptance Criteria for Strategy Usage
 1. Every page has a requirements doc in `Requirements/Page-Requirements/`.
 2. Every page doc includes prototype image, icon list with visible previews, graphical/component analysis, visual asset mapping, events/actions, API mini-contracts, and tests.
