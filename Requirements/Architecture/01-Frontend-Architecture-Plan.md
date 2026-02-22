@@ -157,8 +157,8 @@ ADR rule:
 - each ADR must include context, decision, alternatives considered, consequences.
 
 ## Assumptions and Defaults
-1. Backend/database are unavailable during this phase.
-2. A lite backend exists (or will be introduced) to serve mocked API responses for frontend integration.
+1. Production backend/database are not available during this phase.
+2. A lite backend (local/dev) must be available to serve mocked API responses, and frontend must call these APIs via real HTTP requests.
 3. Frontend architecture must remain implementation-ready but not implemented yet.
 4. Auth flows are intentionally out of scope for now, but auth-related UI controls shown in prototypes should be preserved as non-functional placeholders.
 5. Prototype images are strict visual constraints for the corresponding pages and must be reproduced exactly while using the shared styling/component architecture.

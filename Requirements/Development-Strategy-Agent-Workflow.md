@@ -6,6 +6,25 @@ Define a repeatable, enforceable workflow for every page so any agent can delive
 ## Core Principle
 This strategy is mandatory input for any agent working on page planning or implementation.
 
+## Session Bootstrap (Context Reset Readiness)
+At the start of a new session, the agent must capture and confirm this snapshot before doing work:
+1. Current git branch (`must not be main`).
+2. Implemented pages and routes.
+3. Existing page requirement docs in `Requirements/Page-Requirements/`.
+4. Known open issues/deviations recorded in page docs.
+5. Available test commands and current smoke-test capability.
+
+Minimum startup commands:
+1. `git branch --show-current`
+2. `git status -sb`
+3. `npm test` (from `Codes/`)
+4. `npm run build` (from `Codes/`)
+
+If browser automation smoke command is not yet available:
+1. run app with `npm run dev`,
+2. manually verify target page is not blank and key sections/assets are visible,
+3. record this manual smoke check result in the page requirements doc review notes.
+
 ## Mandatory Pre-Work (Architecture First)
 1. Agent must read **all documents** in `Requirements/Architecture/` before starting analysis or implementation.
 2. Agent must treat all files in that folder as authoritative architecture constraints.
@@ -114,12 +133,12 @@ Every page implementation must include and pass, at minimum:
   - no uncaught runtime error blocks render.
   - required prototype visual assets are visible in the page (banner/illustration/image sections).
 
-7. **Visual asset presence tests (mandatory)**
+6. **Visual asset presence tests (mandatory)**
 - Validate required visual assets defined in the page requirements document are rendered.
 - Validate asset source/path binding is correct.
 - Validate fallback behavior for missing asset (if fallback is explicitly defined and approved).
 
-6. **Accessibility smoke tests**
+7. **Accessibility smoke tests**
 - Keyboard navigation works for main interactive elements.
 - Focus is visible (`:focus-visible`) and semantic landmarks exist.
 
@@ -127,7 +146,7 @@ Every page implementation must include and pass, at minimum:
 For each implemented page, the agent must run and report:
 1. `npm test`
 2. `npm run build`
-3. page/browser smoke test command (e.g., `npm run test:e2e:smoke` once available in project)
+3. `npm run test:e2e:smoke` (when available) OR mandatory manual smoke check documented in page requirements notes.
 
 If any mandatory test is missing from the project tooling, the agent must:
 1. explicitly report the gap,
