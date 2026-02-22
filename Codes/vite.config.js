@@ -79,6 +79,29 @@ const landingContent = {
   },
 };
 
+const choosePathContent = {
+  title: "Choose your Path",
+  subtitle: "Get started by selecting how you want to use GamiDoc for your project",
+  workflowCards: [
+    {
+      id: "new-system",
+      title: "Design & Evaluate a New System",
+      description: "Create and evaluate a gamified system from scratch.",
+      cta: { label: "Start Designing", target: "/design/context" },
+    },
+    {
+      id: "existing-system",
+      title: "Evaluate an Existing System",
+      description: "Assess and document the evaluation of a system that is already implemented.",
+      cta: { label: "Start Evaluation", target: "/evaluation/review" },
+    },
+  ],
+  includes: {
+    newSystem: ["Define Context", "Select game elements", "Plan evaluation"],
+    existingSystem: ["Review system", "Select Methods", "Assess metrics"],
+  },
+};
+
 function liteBackendPlugin() {
   return {
     name: "lite-backend",
@@ -99,6 +122,12 @@ function liteBackendPlugin() {
         if (req.url?.startsWith("/api/v1/pages/landing") && req.method === "GET") {
           res.setHeader("Content-Type", "application/json");
           res.end(JSON.stringify(landingContent));
+          return;
+        }
+
+        if (req.url?.startsWith("/api/v1/pages/choose-path") && req.method === "GET") {
+          res.setHeader("Content-Type", "application/json");
+          res.end(JSON.stringify(choosePathContent));
           return;
         }
 
