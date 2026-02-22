@@ -119,6 +119,7 @@
 .ui-card__description {
   color: var(--color-text-muted);
   font-size: var(--font-size-1);
+  margin-left: calc(44px + var(--space-2));
 }
 
 .ui-card__action {
