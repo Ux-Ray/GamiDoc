@@ -263,3 +263,36 @@ Visibility requirement for all mapped assets:
 ## Status
 - This is a requirements/specification document only.
 - Implementation must start only after explicit user approval.
+
+## Visual Comparison Review Notes
+Review date: 2026-02-21
+Reference: side-by-side check against `Requirements/Prototypes/website Details.png`
+
+Checklist results:
+1. `icon-new-system-final.png`
+- Status: `PASS`
+- Notes: Core clipboard icon shape and colors match prototype.
+
+2. `icon-existing-system-final.png`
+- Status: `PASS`
+- Notes: Monitor + checkmark icon content matches prototype.
+
+3. `icon-target-check-final.png`
+- Status: `PASS (minor crop margin)`
+- Notes: Icon is correct; includes small extra surrounding background area.
+
+4. `icon-puzzle-final.png`
+- Status: `NEEDS ADJUSTMENT`
+- Notes: Right edge of icon is slightly clipped and extra background is present.
+
+5. `icon-document-badge-final.png`
+- Status: `PASS (minor crop margin)`
+- Notes: Icon is correct; includes small extra surrounding background area.
+
+6. `icon-generate-report-final.png`
+- Status: `PASS (minor crop margin)`
+- Notes: Icon is correct; includes extra left margin/background.
+
+Summary:
+- Fidelity is acceptable for planning/documentation.
+- Before implementation, perform one more precise trim pass for `icon-puzzle-final.png` and optional margin cleanup for the other three noted assets.
