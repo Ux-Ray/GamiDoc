@@ -59,6 +59,7 @@ If browser automation smoke command is not yet available:
 - For each icon include source asset path.
 - Icon previews must be embedded and visible in the requirements document (similar to prototype embedding).
 - Default icon asset format is `.png` (unless user explicitly requests another format).
+- Preferred method: generate clean icons from prototype style (AI-assisted) and save as project assets.
 3. Graphical/component analysis.
 - Identify which UI parts of the page map to already available reusable components (from previously developed pages).
 - Identify which required components do not exist yet and must be created.
@@ -68,7 +69,8 @@ If browser automation smoke command is not yet available:
   - source asset path,
   - rendering method (`img`, inline SVG, CSS background),
   - target component where it is used.
-- When icon/image assets are not separately provided, they must be extracted from the prototype image and saved as project assets (default `.png`).
+- For icons, generate clean reusable assets first (AI-assisted) based on prototype style and save as project assets (default `.png`).
+- Cropping from prototype is fallback only (must be explicitly noted in requirements doc).
 - Placeholder graphics are not allowed unless explicitly approved by user in the page requirements review.
 5. Complete event list and actions per event.
 - Include: page open, click, input, submit, keyboard, navigation, modal open/close, error/retry.
@@ -156,7 +158,8 @@ If any mandatory test is missing from the project tooling, the agent must:
 1. Confirm every prototype-required visual element is implemented and visible.
 2. If a required asset is missing in repository inputs:
 - agent must either request the asset or explicit waiver from user,
-- or extract it from provided prototype only if user allows it.
+- or generate clean asset from prototype style and document it,
+- or extract it from provided prototype only as fallback and document that fallback choice.
 3. Do not mark page complete while required visual assets are unresolved.
 
 ### Visual Comparison Review (before commit/push)

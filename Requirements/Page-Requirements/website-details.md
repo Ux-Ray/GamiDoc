@@ -32,15 +32,15 @@ The page must clearly explain both paths and their included steps, while preserv
 - Card B: `Evaluate an Existing System` + CTA `Start Evaluation`
 
 Icons used in workflow cards:
-- Card A icon file: `Requirements/Page-Requirements/assets/website-details/icon-new-system-final.png`
-  ![New System Icon](assets/website-details/icon-new-system-final.png)
-- Card B icon file: `Requirements/Page-Requirements/assets/website-details/icon-existing-system-final.png`
-  ![Existing System Icon](assets/website-details/icon-existing-system-final.png)
+- Card A icon file: `Codes/public/icons/choose-path/new-system.png`
+  ![New System Icon](../../Codes/public/icons/choose-path/new-system.png)
+- Card B icon file: `Codes/public/icons/choose-path/existing-system.png`
+  ![Existing System Icon](../../Codes/public/icons/choose-path/existing-system.png)
 
 4. Mid-page workflow illustration/report block
 - Two-side illustration scene + center report icon + arrows + `Generate Report` label
-- Scene asset file: `Requirements/Page-Requirements/assets/website-details/workflow-scene-final.png`
-  ![Workflow Scene](assets/website-details/workflow-scene-final.png)
+- Scene asset file: `Codes/public/images/choose-path/workflow-scene.png`
+  ![Workflow Scene](../../Codes/public/images/choose-path/workflow-scene.png)
 
 5. Workflow includes section
 - Title: `What each workflow includes`
@@ -48,14 +48,14 @@ Icons used in workflow cards:
 - Right column header: `For existing systems`
 
 List item icons:
-- Target/check icon: `Requirements/Page-Requirements/assets/website-details/icon-target-check-final.png`
-  ![Target Check Icon](assets/website-details/icon-target-check-final.png)
-- Puzzle icon: `Requirements/Page-Requirements/assets/website-details/icon-puzzle-final.png`
-  ![Puzzle Icon](assets/website-details/icon-puzzle-final.png)
-- Document/badge icon: `Requirements/Page-Requirements/assets/website-details/icon-document-badge-final.png`
-  ![Document Badge Icon](assets/website-details/icon-document-badge-final.png)
-- Report icon (center block): `Requirements/Page-Requirements/assets/website-details/icon-generate-report-final.png`
-  ![Generate Report Icon](assets/website-details/icon-generate-report-final.png)
+- Target/check icon: `Codes/public/icons/choose-path/target-check.png`
+  ![Target Check Icon](../../Codes/public/icons/choose-path/target-check.png)
+- Puzzle icon: `Codes/public/icons/choose-path/puzzle.png`
+  ![Puzzle Icon](../../Codes/public/icons/choose-path/puzzle.png)
+- Document/badge icon: `Codes/public/icons/choose-path/document-badge.png`
+  ![Document Badge Icon](../../Codes/public/icons/choose-path/document-badge.png)
+- Report icon (center block): `Codes/public/icons/choose-path/generate-report.png`
+  ![Generate Report Icon](../../Codes/public/icons/choose-path/generate-report.png)
 
 6. Footer
 - Same 4-column footer structure as landing page
@@ -96,35 +96,35 @@ Potential shared components to add if reuse is expected across upcoming pages:
 
 ## 3) Visual Asset Mapping (Mandatory)
 1. New-system card icon
-- Source asset path: `Requirements/Page-Requirements/assets/website-details/icon-new-system-final.png`
-- Asset origin: cropped from `Requirements/Prototypes/website Details.png`
+- Source asset path: `Codes/public/icons/choose-path/new-system.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `WorkflowChoiceCards` (card A icon slot)
 
 2. Existing-system card icon
-- Source asset path: `Requirements/Page-Requirements/assets/website-details/icon-existing-system-final.png`
-- Asset origin: cropped from `Requirements/Prototypes/website Details.png`
+- Source asset path: `Codes/public/icons/choose-path/existing-system.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `WorkflowChoiceCards` (card B icon slot)
 
 3. Workflow scene composite
-- Source asset path: `Requirements/Page-Requirements/assets/website-details/workflow-scene-final.png`
+- Source asset path: `Codes/public/images/choose-path/workflow-scene.png`
 - Asset origin: cropped from `Requirements/Prototypes/website Details.png`
 - Rendering method: `<img>`
 - Target component: `WorkflowSceneBlock`
 
 4. Includes-list icon set
 - Source asset paths:
-  - `Requirements/Page-Requirements/assets/website-details/icon-target-check-final.png`
-  - `Requirements/Page-Requirements/assets/website-details/icon-puzzle-final.png`
-  - `Requirements/Page-Requirements/assets/website-details/icon-document-badge-final.png`
-- Asset origin: cropped from `Requirements/Prototypes/website Details.png`
+  - `Codes/public/icons/choose-path/target-check.png`
+  - `Codes/public/icons/choose-path/puzzle.png`
+  - `Codes/public/icons/choose-path/document-badge.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `WorkflowIncludesItem`
 
 5. Center report icon
-- Source asset path: `Requirements/Page-Requirements/assets/website-details/icon-generate-report-final.png`
-- Asset origin: cropped from `Requirements/Prototypes/website Details.png`
+- Source asset path: `Codes/public/icons/choose-path/generate-report.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `WorkflowSceneBlock`
 
@@ -266,33 +266,33 @@ Visibility requirement for all mapped assets:
 
 ## Visual Comparison Review Notes
 Review date: 2026-02-21
-Reference: side-by-side check against `Requirements/Prototypes/website Details.png`
+Reference: side-by-side check against `Requirements/Prototypes/website Details.png` and implemented assets in `Codes/public/icons/choose-path/`
 
 Checklist results:
-1. `icon-new-system-final.png`
+1. `Codes/public/icons/choose-path/new-system.png`
 - Status: `PASS`
-- Notes: Core clipboard icon shape and colors match prototype.
+- Notes: Core clipboard icon style is clean and consistent with prototype intent.
 
-2. `icon-existing-system-final.png`
+2. `Codes/public/icons/choose-path/existing-system.png`
 - Status: `PASS`
-- Notes: Monitor + checkmark icon content matches prototype.
+- Notes: Monitor + checkmark style is clean and visually aligned.
 
-3. `icon-target-check-final.png`
-- Status: `PASS (minor crop margin)`
-- Notes: Icon is correct; includes small extra surrounding background area.
+3. `Codes/public/icons/choose-path/target-check.png`
+- Status: `PASS`
+- Notes: Clean generated icon, no crop artifacts.
 
-4. `icon-puzzle-final.png`
-- Status: `NEEDS ADJUSTMENT`
-- Notes: Right edge of icon is slightly clipped and extra background is present.
+4. `Codes/public/icons/choose-path/puzzle.png`
+- Status: `PASS`
+- Notes: Clean generated icon, no clipping.
 
-5. `icon-document-badge-final.png`
-- Status: `PASS (minor crop margin)`
-- Notes: Icon is correct; includes small extra surrounding background area.
+5. `Codes/public/icons/choose-path/document-badge.png`
+- Status: `PASS`
+- Notes: Clean generated icon with consistent style.
 
-6. `icon-generate-report-final.png`
-- Status: `PASS (minor crop margin)`
-- Notes: Icon is correct; includes extra left margin/background.
+6. `Codes/public/icons/choose-path/generate-report.png`
+- Status: `PASS`
+- Notes: Clean generated icon with consistent style.
 
 Summary:
-- Fidelity is acceptable for planning/documentation.
-- Before implementation, perform one more precise trim pass for `icon-puzzle-final.png` and optional margin cleanup for the other three noted assets.
+- Icon set now uses AI-generated clean assets based on prototype style.
+- No cropping artifacts remain in implementation icon set.

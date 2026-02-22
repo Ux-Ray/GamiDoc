@@ -104,21 +104,21 @@ Feature-specific components to create under `modules/public/components`:
 
 2. Feature card icon set
 - Source asset path: `Codes/public/icons/design-evaluate.png`
-- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
 - Visibility requirement: icon visible in first card header.
 
 3. Feature card icon set
 - Source asset path: `Codes/public/icons/browse-resources.png`
-- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
 - Visibility requirement: icon visible in second card header.
 
 4. Feature card icon set
 - Source asset path: `Codes/public/icons/shared-designs.png`
-- Asset origin: cropped from `Requirements/Prototypes/landing page.png`
+- Asset origin: AI-generated from prototype style reference
 - Rendering method: `<img>`
 - Target component: `Codes/src/components/ui/Card.jsx` via `Codes/src/modules/public/components/LandingFeatureCards.jsx`
 - Visibility requirement: icon visible in third card header.
