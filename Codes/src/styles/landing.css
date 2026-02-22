@@ -105,8 +105,8 @@
 }
 
 .ui-card__icon {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -119,6 +119,11 @@
 .ui-card__description {
   color: var(--color-text-muted);
   font-size: var(--font-size-1);
+}
+
+.ui-card__action {
+  display: flex;
+  justify-content: center;
 }
 
 .landing-illustration {
@@ -270,3 +275,4 @@
     grid-template-columns: 1fr;
   }
 }
+
